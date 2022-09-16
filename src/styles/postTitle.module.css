@@ -1,0 +1,24 @@
+.listItem {
+    list-style: none;
+    width: 90%;
+    background-color: rgb(61, 85, 112);
+    color: white;
+    padding: 1%;
+    margin-top: 2%;
+    border-radius: 30px;
+}
+.listItem:hover {
+    background-color: rgb(86, 109, 136);
+    transition: ease-in-out 0.5s;
+}
+
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: aquamarine;
+    transition: ease-in-out 0.5s;
+}

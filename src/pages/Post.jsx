@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { useParams, useNavigate, useLocation } from "react-router-dom"
-// import { CommentList } from "../components/comment"
+import { useParams, useNavigate } from "react-router-dom"
+import postStyle from '../styles/post.module.css'
+
 
 
 const Post = () => {
 
-    const location =useLocation();
+    
     const navigate = useNavigate();
     const onNavigate = (page) => {
         navigate(page)
@@ -42,21 +43,25 @@ const Post = () => {
     console.log(comments)
     
   return (
-    <div className="postContainer">
-    <h2>{post?.title}</h2>
-    <p>{post?.body}</p>
-    <h2>Comments:</h2>
+    <div className={postStyle.body}>
+
+    <div className={postStyle.postContainer}>
+    <h2 className={postStyle.postTitle}>{post?.title}</h2>
+    <p className={postStyle.postBody}>{post?.body}</p>
+    </div>
 
     {comments && 
-    <div>
-    <p>{comments.name}</p>
-    <p>{comments.body}</p>
-    <p>{comments.email}</p>
+    <div className={postStyle.commentContainer}>
+    <h2 className={postStyle.commentIntro}>Comments:</h2>
+    <p className={postStyle.commentName}>{comments.name}</p>
+    <p className={postStyle.commentEmail}>{comments.email}</p>
+    <p className={postStyle.commentBody}>{comments.body}</p>
+    
     </div>
     }
 
     
-    <button className="backButton" onClick={() => {onNavigate('/')}}>Back to Home</button>
+    <button className={postStyle.btn} onClick={() => {onNavigate('/')}}>Home</button>
 
     </div>
   )

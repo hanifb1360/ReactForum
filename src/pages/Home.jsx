@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react"
 import axios from "axios"
 import PostTitle from "../components/PostTitle"
+import homeStyle from '../styles/home.module.css'
 
 
 const Home = () => {
@@ -16,7 +17,7 @@ const [allPosts, setAllPosts] = useState([])
           },[])
           
   return (
-    <div>
+    <div className={homeStyle.listContainer}>
     {allPosts && allPosts.map((post, index)=>{
 return (
   

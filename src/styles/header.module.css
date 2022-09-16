@@ -1,0 +1,22 @@
+
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(46, 46, 46);
+    color: aliceblue;
+    padding: 15px;
+}
+
+.title {
+    color: aliceblue;
+    font-weight: 500;
+}
+.subTitle {
+    color: aliceblue;
+    font-weight: 300;
+}
